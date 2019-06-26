@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat with Lang</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <script src="https://use.fontawesome.com/a08d5d0be9.js"></script>
+    <script src="assets/components/modernizr/modernizr.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#spy">
+
+        <!-- Chatbot -->
+        <section id="chatbot">
+                <div class="row">
+                    <div class="row text-center">
+                        <h2 class="title">Chat with Lang !</h2>
+                        <p class="subtitle"><i>Un chatbot pour remplacer l'irremplaçable</i></p>
+                        <span class="divider center"></span>
+                    </div>
+                    <div class="iphone-x">
+                        <i>Speaker</i>
+                        <b>Camera</b>
+                        <div class="chat-container">
+                            <div class="input-chat" id="bottom-chat">
+                                <input id="input-chat" type="text" placeholder="Parles puis Entrée" autocomplete="off">
+                            </div>
+                            <input class="apple-switch" type="checkbox">
+                            <div class="messages-chat">
+                                <div class="mine messages">
+                                    <div class="message">
+                                        <p>Salut !</p>
+                                    </div>
+                                    <div class="message">
+                                        <p>Je suis trop beau, je sens trop bon, t'en veux un bout?</p>
+                                    </div>
+                                </div>
+                            </div>                      
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <!-- End of Chatbot -->
+
+    <script src="assets/components/jquery/jquery.min.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
+    <script src="assets/js/jquery.typist.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    
+    <script>
+
+        $(function () {
+            $('form').on('submit', function (event) {
+                event.preventDefault();
+                var message = $('.message').first().clone();
+                message.find('p').text($('input').val());
+                message.prependTo('.chat-container');
+                $('input').val('');
+            });
+            });
+    </script>
+
+    
